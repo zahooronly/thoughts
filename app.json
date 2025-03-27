@@ -15,7 +15,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.zahooronly.notes"
     },
     "web": {
       "bundler": "metro",
@@ -36,6 +37,11 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "2abaea72-50d6-4674-9409-b54cbf672b00"
+      }
     }
   }
 }
