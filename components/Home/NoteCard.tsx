@@ -16,7 +16,12 @@ interface NoteCardProps {
   onDelete: () => void;
 }
 
-export function NoteCard({ item, index, onHeaderScale, onDelete }: NoteCardProps) {
+export function NoteCard({
+  item,
+  index,
+  onHeaderScale,
+  onDelete,
+}: NoteCardProps) {
   const theme = useTheme();
 
   return (
@@ -61,16 +66,6 @@ export function NoteCard({ item, index, onHeaderScale, onDelete }: NoteCardProps
             onPress={onDelete}
           />
         </View>
-        <Text
-          variant="bodyMedium"
-          numberOfLines={3}
-          style={[
-            HomeStyles.content,
-            { color: theme.dark ? COLORS.text.dark : COLORS.text.light },
-          ]}
-        >
-          {item.content}
-        </Text>
         <Text
           variant="bodySmall"
           style={[
