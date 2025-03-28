@@ -1,11 +1,14 @@
 import { View, StyleSheet, StatusBar } from "react-native";
 import { Text, useTheme, IconButton } from "react-native-paper";
 import { useLocalSearchParams, router } from "expo-router";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { loadNotes, deleteNote } from "@/utils/storage";
 import { Note } from "@/utils/types";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import Animated, { FadeIn } from "react-native-reanimated";
+import HTMLView from "react-native-htmlview";
+import { SCREEN_WIDTH } from "@/constants/Dimensions";
+import { COLORS } from "@/constants/Colors";
 
 export default function NoteDetailScreen() {
   const { id } = useLocalSearchParams();
@@ -53,9 +56,19 @@ export default function NoteDetailScreen() {
         <Text variant="bodySmall" style={styles.date}>
           {new Date(note.createdAt).toLocaleDateString()}
         </Text>
-        <Text variant="bodyLarge" style={styles.noteContent}>
+        {/* <Text variant="bodyLarge" style={styles.noteContent}>
           {note.content}
-        </Text>
+        </Text> */}
+        <HTMLView
+          value={note.content}
+          stylesheet={{
+            p: {
+              color: theme.dark ? COLORS.text.dark : COLORS.text.light,
+              fontSize: 16,
+              lineHeight: 24,
+            },
+          }}
+        />
       </Animated.View>
     </View>
   );
