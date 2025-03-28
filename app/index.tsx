@@ -107,7 +107,7 @@ export default function HomeScreen() {
         style={[
           HomeStyles.searchContainer,
           { backgroundColor: theme.dark ? COLORS.secondary : "#FFFFFF" },
-          searchContainerStyle,
+          searchContainerStyle, // Use the animated style here
         ]}
       >
         <TextInput
