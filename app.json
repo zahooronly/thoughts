@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "notes",
+    "name": "thoughts!",
     "slug": "notes",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
+    "scheme": "notes",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
@@ -21,17 +21,25 @@
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/images/icon.png"
     },
     "plugins": [
       "expo-router",
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/splash-icon.png",
-          "imageWidth": 200,
-          "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
+          "dark": {
+            "image": "./assets/images/splash-icon-dark.png",
+            "imageWidth": 200,
+            "resizeMode": "contain",
+            "backgroundColor": "#000000"
+          },
+          "light": {
+            "image": "./assets/images/splash-icon-light.png",
+            "imageWidth": 200,
+            "resizeMode": "contain",
+            "backgroundColor": "#ffffff"
+          }
         }
       ]
     ],
