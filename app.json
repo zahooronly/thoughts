@@ -2,7 +2,7 @@
   "expo": {
     "name": "thoughts!",
     "slug": "notes",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "notes",
@@ -16,7 +16,8 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.zahooronly.notes"
+      "package": "com.zahooronly.notes",
+      "versionCode": 2
     },
     "web": {
       "bundler": "metro",
